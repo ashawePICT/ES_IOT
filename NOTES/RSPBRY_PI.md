@@ -1,0 +1,9 @@
+# RASPBERRY PIE
+
+## MIN REQ
+- SD CARD *8 GB* ( 4GB for lite )
+  - any SD card larger than 32GB is an SDXC card and has to be formatted with the exFAT filesystem. This means the official SD Formatter tool will always format cards that are 64GB or larger as exFAT.
+  - The original Raspberry Pi Model A and Raspberry Pi Model B require full-size SD cards. From the Model B+ (2014) onwards, a micro SD card is required.
+
+## TO INSTALL
+- 
