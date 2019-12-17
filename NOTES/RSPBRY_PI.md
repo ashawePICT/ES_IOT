@@ -1,9 +1,20 @@
 # RASPBERRY PIE
 
 ## MIN REQ
-- SD CARD *8 GB* ( 4GB for lite )
+- SD CARD **8 GB** ( 4GB for lite )
   - any SD card larger than 32GB is an SDXC card and has to be formatted with the exFAT filesystem. This means the official SD Formatter tool will always format cards that are 64GB or larger as exFAT.
   - The original Raspberry Pi Model A and Raspberry Pi Model B require full-size SD cards. From the Model B+ (2014) onwards, a micro SD card is required.
 
 ## TO INSTALL
-- 
+- **balenaEtcher** is a graphical SD card writing tool and is the easiest option for most users. balenaEtcher also supports writing images directly from the zip file, without any unzipping required. ( zenity might be needed )
+- if installing via dd command:
+  - ```dd bs=4M if=2019-09-26-raspbian-buster.img of=/dev/sdX status=progress conv=fsync``` where
+    ```
+    bs=BYTES        read and write up to BYTES bytes at a time
+    conv=CONVS      convert the file as per the comma separated symbol list
+    if=FILE         read from FILE instead of stdin
+    of=FILE         write to FILE instead of stdout
+    status=WHICH    WHICH info to suppress outputting to stderr; 'noxfer' suppresses transfer stats, 'none' suppresses all
+    ```
+    BB can also be said to be block size
+    can also do ```unzip -p 2019-09-26-raspbian-buster.zip | sudo dd of=/dev/sdX bs=4M conv=fsync```
